@@ -2,7 +2,7 @@ name: Curl Website Every 15 Minutes
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Every 15 minutes (UTC)
+    - cron: '*/13 * * * *'  # Every 15 minutes (UTC)
   workflow_dispatch:
 jobs:
   curl_and_log:
