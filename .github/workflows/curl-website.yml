@@ -1,0 +1,26 @@
+name: Curl Website Every 15 Minutes
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes (UTC)
+
+jobs:
+  curl_and_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Curl website and save output
+        run: |
+          mkdir -p logs
+          timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+          curl -s -i https://portfolio-1qu7.onrender.com/ > logs/output_$timestamp.log
+
+      - name: Commit log file
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/
+          git commit -m "Add curl output log at $timestamp" || echo "No changes to commit"
+          git push
