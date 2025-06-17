@@ -1,0 +1,29 @@
+HTTP/2 200 
+date: Tue, 17 Jun 2025 05:50:14 GMT
+content-type: text/html; charset=UTF-8
+cache-control: public, max-age=0
+etag: W/"271-1968b692530"
+last-modified: Thu, 01 May 2025 10:34:06 GMT
+rndr-id: e3bd54b6-96d8-4ec5
+vary: Accept-Encoding
+x-powered-by: Express
+x-render-origin-server: Render
+cf-cache-status: DYNAMIC
+server: cloudflare
+cf-ray: 951043e1588a0902-LAX
+alt-svc: h3=":443"; ma=86400
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <script type="module" crossorigin src="/assets/index-CxIPJrIr.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BSubB1yT.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
